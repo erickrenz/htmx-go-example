@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="htmx.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <title>Htmx Docs</title>
+</head>
+
+<body>
+    <h1>HTMX Docs Walkthrough</h1>
+    <p>Official Documentation: <a href="https://htmx.org/docs/">htmx.org/docs</a></p>
+
+    <h2>AJAX</h2>
+
+    <div hx-get="/click" hx-trigger="click[ctrlKey]">
+        Control Click Me
+    </div>
+
+    <div hx-get="/ping" hx-trigger="load"></div>
+
+    <div hx-get="/css" hx-trigger="load" hx-swap="outerHTML" id="div1">Original Content</div>
+
+    <h2>Boosting</h2>
+
+    <div hx-boost="true">
+        <a href="/blog">Blog</a>
+    </div>
+
+    <h2>State</h2>
+
+    <div hx-post="/bar" hx-target="#result" hx-trigger="load"></div>
+    <button hx-post="/foo" hx-target="#result">
+        Count Up
+    </button>
+    <output id="result"></output>
+
+    <h2>Classes</h2>
+
+    <button onclick="this.classList.toggle('red-border')">Toggle Class</button>
+</body>
+
+</html>

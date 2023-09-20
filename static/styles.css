@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.red {
+    color: red;
+    transition: all ease-in 1s;
+}
